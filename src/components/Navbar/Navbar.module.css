@@ -1,0 +1,38 @@
+.CContainer{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    align-content: center;
+    padding: 0;
+}
+
+.Open{
+    height: 100vh;
+    align-content: flex-start;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.Logo{
+    fill: white;
+    height: 38px;
+align-self: center;
+}
+
+.Hidden{visibility: hidden; height: 25px;}
+
+.Burger{
+    height: 25px;
+    cursor: pointer;
+    align-self: center;
+}
