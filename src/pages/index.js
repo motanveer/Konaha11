@@ -1,6 +1,7 @@
 import * as React from "react"
 import Navbar from '../components/Navbar/Navbar'
 import * as styles from './Index.module.css'
+import 'animate.css'
 
 
 
