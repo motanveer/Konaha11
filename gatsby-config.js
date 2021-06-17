@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "Konaha",
   },
-  plugins: [{
+  plugins: [ `gatsby-plugin-image`,
+  `gatsby-plugin-sharp`,
+  `gatsby-transformer-sharp`,{
+    
     resolve: 'gatsby-plugin-react-svg',
     options: {
       rule: {
