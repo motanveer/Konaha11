@@ -12,5 +12,14 @@ module.exports = {
         include: /assets/
       }
     }
-  }],
+  }, {
+    resolve: `gatsby-plugin-google-fonts`,
+    options:{
+      fonts: [
+        'rubik\:500,700'
+      ],
+      display:'swap',
+    },
+    }
+],
 };

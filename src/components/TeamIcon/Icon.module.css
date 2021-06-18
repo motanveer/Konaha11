@@ -1,0 +1,30 @@
+.Container
+{
+    height: 180px;
+    width: 180px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.imageContainer{
+    background-color: #FFDD33;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.teamLabel{
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom:0 ;
+}
+
