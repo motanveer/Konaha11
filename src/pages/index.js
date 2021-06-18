@@ -24,7 +24,7 @@ const Home = () => {
        </div>
       </div>
       <StaticImage className={styles.hero} src="../images/cover.png" alt="A dinosaur"
-          placeholder="lazy"
+          placeholder="tracedSVG"
           layout="constrained" ></StaticImage>
     </div>
   )

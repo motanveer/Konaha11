@@ -18,9 +18,9 @@ const Navbar = (props) => {
             <div> 
                 <div className={styles.CContainer}>
 
-                    <Burger className={styles.Hidden} />
-                    <Logo className={styles.Logo}></Logo>
-                    <Burger onClick={toggleVis} className={styles.Burger} />
+                    <img src={Burger} className={styles.Hidden} />
+                    <img src={Logo} className={styles.Logo}/>
+                    <img src={Burger} onClick={toggleVis} className={styles.Burger} />
                 </div>
                 <div className={styles.Open}>
                 <h1 className={styles.h1}>
@@ -37,9 +37,9 @@ const Navbar = (props) => {
         return (
             <div className={styles.CContainer}>
 
-                <Burger className={styles.Hidden} />
-                <Logo className={styles.Logo}></Logo>
-                <Burger onClick={toggleVis} className={styles.Burger} />
+                <img src={Burger} className={styles.Hidden} />
+                <img src={Logo} className={styles.Logo}/>
+                <img src={Burger} onClick={toggleVis} className={styles.Burger} />
 
             </div>
 
