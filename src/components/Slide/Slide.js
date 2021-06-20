@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './Slide.module.scss'
-import { StaticImage } from "gatsby-plugin-image"
-
+import { StaticImage} from "gatsby-plugin-image"
+import Img from 'gatsby-image'
 export default function Slide(props) {
 
     if(props.direction == 'right'){
@@ -18,15 +18,17 @@ export default function Slide(props) {
         )
     }
 
+    console.log(props.image)
     return (
         <div className={styles.Wrapper}>
-            <StaticImage className={styles.characterImage} src="../../images/ino.png"  height={600} layout="fixed" placeholder="tracedSVG"/>
+            <Img className={styles.characterImage} fluid={props.image}/>
             <div className={styles.characterInfo}>
                 <p className={styles.characterName}>{props.characterName}</p>
-                <p className={styles.characterBio}>
-                Ino Yamanaka (山中いの, Yamanaka Ino) is a kunoichi of Konohagakure's Yamanaka clan. She and her fellow members of Team Asuma are their generation's Ino–Shika–Chō trio. 
-                </p>
+                <p className={styles.characterBio}>{props.characterBio}</p>
             </div>
         </div>
     )
 }
+
+// <StaticImage className={styles.characterImage} src={props.imagePath}  height={600} layout="fixed" placeholder="tracedSVG"/>
+

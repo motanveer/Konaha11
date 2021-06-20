@@ -12,8 +12,6 @@ overflow: hidden;
 
 }
 
-
-
 @keyframes scroll {
     100%{
      background-position:0px -3000px;
@@ -65,11 +63,6 @@ margin-right: 0;
 margin-top: 0;
 margin-bottom: 200%;
 overflow: hidden;
-
--webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-animation: slide-in-right .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-
 }
 
 body{
@@ -77,11 +70,6 @@ body{
     max-height: 1080px;
 
 }
-
-
-
-html, body {margin: 0;}
-
   .iconContainer{
     margin: 0 auto;
     display: grid;
@@ -90,7 +78,3 @@ html, body {margin: 0;}
     grid-gap: 50px;
 
   }
-
-  .contentArea{
-  }
-  
