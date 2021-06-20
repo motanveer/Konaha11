@@ -8,6 +8,8 @@ flex-direction: column;
 background-size: 5%;
 
 animation: scroll 250s linear infinite;
+overflow: hidden;
+
 }
 
 
@@ -30,6 +32,7 @@ animation: scroll 250s linear infinite;
 .contentContainer{
 height: 100vh;
 width: 0%;
+overflow: hidden;
 }
 
 .selectBox{
@@ -61,6 +64,8 @@ margin-left: 55%;
 margin-right: 0;
 margin-top: 0;
 margin-bottom: 200%;
+overflow: hidden;
+
 -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 animation: slide-in-right .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
@@ -69,12 +74,13 @@ animation: slide-in-right .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 body{
     margin: 0;
-    height: 1080px;
+    max-height: 1080px;
+
 }
 
 
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0;}
 
   .iconContainer{
     margin: 0 auto;

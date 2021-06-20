@@ -25,9 +25,10 @@
     align-items: center;
 
 
-    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-top 0.23s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.23s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             z-index: 1;
+     
 }
 
 .Logo{
@@ -46,8 +47,8 @@ align-self: center;
 }
 
 .h1{
+  font-family: 'Archivo';
     color: black;
-    font-family: 'Roboto';
     font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
