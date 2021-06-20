@@ -22,7 +22,7 @@ export default function Slide(props) {
         <div className={styles.Wrapper}>
             <StaticImage className={styles.characterImage} src="../../images/ino.png"  height={600} layout="fixed" placeholder="tracedSVG"/>
             <div className={styles.characterInfo}>
-                <p className={styles.characterName}>Ino Yamanaka</p>
+                <p className={styles.characterName}>{props.characterName}</p>
                 <p className={styles.characterBio}>
                 Ino Yamanaka (山中いの, Yamanaka Ino) is a kunoichi of Konohagakure's Yamanaka clan. She and her fellow members of Team Asuma are their generation's Ino–Shika–Chō trio. 
                 </p>

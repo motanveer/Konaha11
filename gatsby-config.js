@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Konaha",
+    title: "Konaha Teams",
   },
   plugins: [ `gatsby-plugin-image`,
+  `gatsby-transformer-remark`,
+  `gatsby-plugin-mdx`,
   `gatsby-plugin-sass`,
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`, {
@@ -14,6 +16,13 @@ module.exports = {
       ],
       display:'swap',
     },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/data`,
+      }
     }
 ],
 };

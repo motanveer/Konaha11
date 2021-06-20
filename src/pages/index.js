@@ -3,16 +3,26 @@ import Navbar from '../components/Navbar/Navbar'
 import * as styles from './Index.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import Icon from "../components/TeamIcon/Icon"
-
+import {useStaticQuery, graphql} from 'gatsby'
 
 
 const Home = () => {
+
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }  
+`)
   return (
     <div className={styles.Container}>
       <Navbar />
       <div className={styles.selectBox}>
        <div className={styles.contentArea}>
-       <h1>Konaha's Teams</h1>
+       <h1>{data.site.siteMetadata.title}</h1>
        <p>
        </p>
        <div className={styles.iconContainer}>
