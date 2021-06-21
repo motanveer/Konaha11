@@ -7,43 +7,20 @@ import Img from 'gatsby-image'
 import {useStaticQuery, graphql} from 'gatsby'
 
 
-const TeamX = ()=>{
-    const data  = useStaticQuery(graphql`
-    query MyQuery {
-        allMdx {
-          nodes {
-            frontmatter {
-              title
-              members {
-                name
-                description
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 600) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      
-      
-`)
-    //console.log(data.allMdx.nodes[0].frontmatter)  
-    //console.log(data.allMdx.nodes[0].frontmatter.members[0])
-    console.log(data.allMdx.nodes[0].frontmatter.members[0].image.childImageSharp.fluid)
-    const image = data.allMdx.nodes[0].frontmatter.members[0].image.childImageSharp.fluid
+const TeamX = ({data})=>{
+
+//Filter the result of the graphQL query to access the relevant data:
+const teamData = data.allMdx.nodes[0].frontmatter;
+console.log(teamData.members)
+
+const teamMebers = teamData.members.map((character, index) => 
+  <Slide key={index + 1} index={index +1 } name={character.name} bio={character.bio} image={character.image.childImageSharp.fluid}/>
+)
+
     return(
         <div>
             <Navbar/>
-            <Slide 
-            characterName={data.allMdx.nodes[0].frontmatter.members[0].name} 
-            characterBio= {data.allMdx.nodes[0].frontmatter.members[0].description}
-            image = {image}
-            />
+            {teamMebers}
             
         </div>
     )
@@ -51,13 +28,25 @@ const TeamX = ()=>{
 
 export default TeamX
 
-/*
-<Navbar/>
-            <div className={styles.contentContainer}>
-               // <Slide characterName={data.allMdx.nodes[0].frontmatter.members[0].name}/>
-                //<Slide direction="right"/>
-               // <Slide/>
-            </div>
-*/
-
-//<Img fixed={data.allMdx.nodes[0].frontmatter.members[0].image.childImageSharp.fixed}/>
+export  const query  = graphql`
+query($slug: String!) {
+  allMdx(filter: {slug: {eq: $slug}}) {
+    nodes {
+      frontmatter {
+        title
+        members {
+          bio
+          name
+          image {
+            childImageSharp {
+              fluid(maxWidth: 660){
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}     
+`

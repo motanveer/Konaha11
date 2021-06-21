@@ -25,7 +25,7 @@ const Navbar = (props) => {
                 <div className={styles.Open}>
                 <h1 className={styles.h1}>
                     <Link className={styles.h1} to="/">Home</Link><br/><br/>
-                    <Link className={styles.h1} to="/TeamX">Team 10</Link>
+                    <Link className={styles.h1} to="/Team10">Team 10</Link>
                 </h1>
 
                 </div>
