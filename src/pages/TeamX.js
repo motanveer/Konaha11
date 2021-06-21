@@ -22,7 +22,11 @@ console.log(teamData.members)
 
 //Create Slide components for each item in the array:
 const teamMembers = teamData.members.map((character, index) => 
-  <Slide key={index + 1} index={index +1 } name={character.name} bio={character.bio} image={character.image.childImageSharp.gatsbyImageData}/>)
+  <Slide key={index + 1} index={index +1 } 
+  name={character.name} 
+  bio={character.bio} 
+  color={character.color}
+  image={character.image.childImageSharp.gatsbyImageData}/>)
 
     return(
         <div>
@@ -48,6 +52,7 @@ query($slug: String) {
         members {
           bio
           name
+          color
           image {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED, height: 600, placeholder: TRACED_SVG)

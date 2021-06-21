@@ -6,26 +6,29 @@ import {GatsbyImage } from 'gatsby-plugin-image'
 
 
 export default function Slide(props) {    
-    const determineAlignment = () =>
-    {
+    
         if(props.index %2 == 0){
-            return styles.WrapperR
+            return (
+                <div style={{backgroundColor: props.color}} className={styles.WrapperR}>
+                    <GatsbyImage className={styles.characterImageR} image={props.image}/>
+                    <div className={styles.characterInfoR}>
+                        <p className={styles.characterNameR}>{props.name}</p>
+                        <p className={styles.characterBio}>{props.bio}</p>
+                    </div>
+                </div>
+            )
         }
         else{
-            return styles.Wrapper
-        }
+            return (
+                <div style={{backgroundColor: props.color}}  className={styles.Wrapper}>
+                    <Img className={styles.characterImage} fluid={props.image}/>
+                    <GatsbyImage image={props.image}/>
+                    <div className={styles.characterInfo}>
+                        <p className={styles.characterName}>{props.name}</p>
+                        <p className={styles.characterBio}>{props.bio}</p>
+                    </div>
+                </div>
+            )
     } 
-    
-    return (
-        <div className={determineAlignment()}>
-            <Img className={styles.characterImage} fluid={props.image}/>
-            <GatsbyImage image={props.image}/>
-            <div className={styles.characterInfo}>
-                <p className={styles.characterName}>{props.name}</p>
-                <p className={styles.characterBio}>{props.bio}</p>
-            </div>
-        </div>
-    )
 
-    
 }
