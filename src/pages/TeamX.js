@@ -38,6 +38,7 @@ const TeamX = ()=>{
     const image = data.allMdx.nodes[0].frontmatter.members[0].image.childImageSharp.fluid
     return(
         <div>
+            <Navbar/>
             <Slide 
             characterName={data.allMdx.nodes[0].frontmatter.members[0].name} 
             characterBio= {data.allMdx.nodes[0].frontmatter.members[0].description}
