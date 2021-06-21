@@ -83,11 +83,12 @@ exports.onCreateWebpackConfig = ({
     actions.replaceWebpackConfig(config)
   }
 };
+/*
 exports.onCreateNode = ({ node, getNode }) => {
   if (node.internal.type === `Mdx`) {
     console.log(createFilePath({ node, getNode, basePath: `pages` }))
   }
-}
+}*/
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -110,7 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
         path: node.slug,
         component: path.resolve(`./src/pages/TeamX.js`),
         context:{
-          slug: node.slug
+          slug: node.slug,
         }, 
       })
     })

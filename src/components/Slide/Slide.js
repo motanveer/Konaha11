@@ -1,11 +1,10 @@
 import React from 'react'
 import * as styles from './Slide.module.scss'
-import { StaticImage} from "gatsby-plugin-image"
-import Img from 'gatsby-image'
+import Img from 'gatsby-image' //Deprecated
 export default function Slide(props) {
 
    
-    console.log(props.index)
+    
     const determineAlignment = () =>
     {
         if(props.index %2 == 0){
