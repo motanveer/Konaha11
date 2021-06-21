@@ -21,8 +21,7 @@ export default function Slide(props) {
         else{
             return (
                 <div style={{backgroundColor: props.color}}  className={styles.Wrapper}>
-                    <Img className={styles.characterImage} fluid={props.image}/>
-                    <GatsbyImage image={props.image}/>
+                    <GatsbyImage className={styles.characterImage} image={props.image}/>
                     <div className={styles.characterInfo}>
                         <p className={styles.characterName}>{props.name}</p>
                         <p className={styles.characterBio}>{props.bio}</p>
