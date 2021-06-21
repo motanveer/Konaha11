@@ -22,7 +22,7 @@ console.log(teamData.members)
 
 //Create Slide components for each item in the array:
 const teamMembers = teamData.members.map((character, index) => 
-  <Slide key={index + 1} index={index +1 } name={character.name} bio={character.bio} image={character.image.childImageSharp.fluid}/>)
+  <Slide key={index + 1} index={index +1 } name={character.name} bio={character.bio} image={character.image.childImageSharp.gatsbyImageData}/>)
 
     return(
         <div>
@@ -30,7 +30,8 @@ const teamMembers = teamData.members.map((character, index) =>
             {teamMembers}
         </div>
     )
-}
+
+  }
 
 export default TeamX
 
@@ -49,9 +50,7 @@ query($slug: String) {
           name
           image {
             childImageSharp {
-              fluid(maxWidth: 660){
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
+              gatsbyImageData(layout: CONSTRAINED, height: 600, placeholder: TRACED_SVG)
             }
           }
         }
@@ -60,3 +59,4 @@ query($slug: String) {
   }
 }     
 `
+
