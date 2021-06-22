@@ -55,7 +55,7 @@ query($slug: String) {
           color
           image {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, height: 600, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: CONSTRAINED, height: 600, placeholder: TRACED_SVG, quality: 90)
             }
           }
         }
